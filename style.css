@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -30,16 +35,16 @@ img {
 }
 /* ====== BASE  ========*/
 body {
-  font: 400 1rem "DM Sans", sans-serif;
+  font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-   font: 700 1.875rem "Poppins", sans-serif;
-   color: var(--title-color);
-   -webkit-font-smoothing: auto;
+.title {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
 
 .button {
@@ -63,14 +68,14 @@ h1 {
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1) 0%,
-    hsla(var(--hue), 65%, 88%, 0.34) 100%    
-    );
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
 }
 
 /* ====== LAYOUT  ========*/
 
 .container {
-   margin-left: 1.5rem;
+  margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
@@ -96,17 +101,14 @@ h1 {
   width: 100%;
 }
 
-nav {
-  height: var(--header-heigth);
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  width: 100%;
+main {
+  margin-top: calc(var(--header-heigth) + 2rem);
 }
 
-/* ====== RESET  ========*/
+/* ====== LOGO  ========*/
+
 .logo {
-  font: 700 1.31rem "Poppins", sans-serif;
+  font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
 }
 
@@ -114,9 +116,67 @@ nav {
   color: var(--base-color);
 }
 
-main {
-  margin-top: var(--header-heigth);
- }
+/* ====== NAVIGATION  ========*/
+nav {
+  height: var(--header-heigth);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color);
+}
+
+nav ul li a:hover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+}
+
+nav ul nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Mostrar menu*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
 
 /* ====== HOME  ========*/
 #home {
@@ -124,7 +184,7 @@ main {
 }
 
 #home .container {
-  margin: 0; 
+  margin: 0;
 }
 
 #home .image {
@@ -166,4 +226,3 @@ main {
   margin-bottom: 2rem;
   max-width: 100%;
 }
-

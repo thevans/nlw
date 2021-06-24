@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-<head>
-  <!--PAGE INFO/config-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BazingaTech.</title>
-  <!--nome aba / configs da pagina -->
+  <head>
+    <!--PAGE INFO/config-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BazingaTech.</title>
+    <!--nome aba / configs da pagina -->
 
-  <!--STYLES-->
-  <link rel="stylesheet" href="style.css" />
+    <!--STYLES-->
+    <link rel="stylesheet" href="style.css" />
 
-  <!--FONTS-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container show">
+        <a class="logo" href="#"> Bazinga<span>Tech</span>.</a>
+        <!--menu-->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#servives">Serviços</a></li>
+            <li><a class="title" href="#testmonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contatos</a></li>
+          </ul>
+        </div>
+        <!--/menu-->
+        <div class="open">...</div>
+        <div class="close">x</div>
+      </nav>
+    </header>
 
-</head>
-<body>
- <header id="header">
-   <nav class="container">
-     <a class="logo" href="#"> Bazinga<span>Tech</span>.</a>
-     <div class="menu">...</div>
-   </nav>
- </header> 
-  
- <main>
-   <section class="section" id="home">
-     <div class="container grid">
-      <div class="image">
-        <img src="https://images.unsplash.com/photo-1617471346061-5d329ab9c574?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQyfHxkZXZlbG9wbWVudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="notebook branco sob uma mesa de madeira, utilizando software para desenvolvimento, um como de café a direita e um vaso de flor a esquerda, duas mãos trabalham no computador.">
-      </div>
-      <div class="text">
-        <h1>Desenvolvimento em primeiro plano</h1>
-        <p> 
-          Aqui vai mais um texto bonitinho para dizer que somos a melhor empresa para confiar seu projeto ;)
-        </p>
-        <a class="button" href="#" >Entre em contato</a>
-      </div>
-     </div>
-   </section>
+    <main>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1617471346061-5d329ab9c574?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQyfHxkZXZlbG9wbWVudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="notebook branco sob uma mesa de madeira, utilizando software para desenvolvimento, um como de café a direita e um vaso de flor a esquerda, duas mãos trabalham no computador."
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Desenvolvimento em primeiro plano</h2>
+            <p>
+              Aqui vai mais um texto bonitinho para dizer que somos a melhor
+              empresa para confiar seu projeto ;)
+            </p>
+            <a class="button" href="#">Entre em contato</a>
+          </div>
+        </div>
+      </section>
 
-   <div class="divider-1"></div>
-   
-   <section class="section">
-     <div class="container"> outra section</div>
-   </section>
- </main>
-</body>
+      <div class="divider-1"></div>
+
+      <section class="section" id="about">
+        <div class="container grid">Sobre</div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container grid">Serviços</div>
+      </section>
+    </main>
+  </body>
 </html>
